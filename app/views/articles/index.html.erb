@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Author</th>
       <th>Title</th>
       <th>Description</th>
       <th colspan="3">Actions</th>
@@ -11,6 +12,7 @@
   <tbody>
   <% @articles.each do |article| %>
       <tr>
+      <td><%= article.user.username %></td>
         <td><%= article.title %></td>
         <td><%= article.description %></td>
         <td><%= link_to 'Show', article_path(article) %></td>
